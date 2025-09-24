@@ -176,6 +176,24 @@ header nav a:hover {
     margin-bottom: 10px;
 }
 
+/* Sección Análisis Estadístico */
+.analisis-item {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.analisis-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.analisis-item img {
+    max-width: 50%;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde);
+}
+
 /* Sección Contacto */
 #contacto {
     text-align: center;
@@ -215,9 +233,13 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .perfil-container {
+    .perfil-container, .analisis-item, .analisis-item:nth-child(odd) {
         flex-direction: column;
         text-align: center;
+    }
+
+    .analisis-item img {
+        max-width: 100%;
     }
 
     h2 {
